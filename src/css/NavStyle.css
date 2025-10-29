@@ -1,0 +1,30 @@
+.portfolio-navbar {
+  background-color: black !important;
+  backdrop-filter: blur(8px);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.portfolio-navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: #b0b0b0 !important;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #00bcd4 !important;
+}
+
+.navbar-toggler {
+  border-color: #444 !important;
+}
