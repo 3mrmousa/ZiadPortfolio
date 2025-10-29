@@ -5,21 +5,36 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope as faEnvelopeRegular } from "@fortawesome/free-regular-svg-icons";
 
+import { motion } from "framer-motion";
+
 function Home() {
   return (
     <>
       <div className="home pt-5">
-        <section id="hero-section" className="hero-section d-flex align-items-center justify-content-center text-center">
+        <section
+          id="hero-section"
+          className="hero-section d-flex align-items-center justify-content-center text-center"
+        >
           <div className="row container align-items-center">
-            <div className="image clo-12 col-lg-6 mb-4 mb-lg-0">
+            <motion.div
+              className="image clo-12 col-lg-6 mb-4 mb-lg-0"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+            >
               <img
                 src={heroImg}
                 alt=""
                 className="img-fluid rounded-5 shadow-lg profile-img"
               />
-            </div>
+            </motion.div>
 
-            <div className="col-12 col-lg-6">
+            <motion.div
+              className="col-12 col-lg-6"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+            >
               <h1 className="display-4 fw-bold text-white">
                 Hi, I'm <span className="text-info">Ziad Tamer</span>
               </h1>
@@ -36,7 +51,7 @@ function Home() {
               >
                 About
               </a>
-            </div>
+            </motion.div>
           </div>
         </section>
 
